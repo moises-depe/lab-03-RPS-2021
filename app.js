@@ -22,7 +22,7 @@ guessButton.addEventListener('click', () => {
     totalSpan.textContent = total;
 
     const computersChoice = getRandomThrow();
-    const radioButton = document.getElementById('input[type="radio"]:checked');
+    const radioButton = document.querySelector('input[type="radio"]:checked');
     const usersChoice = radioButton.value;
     const result = didUserWin(usersChoice, computersChoice);
 

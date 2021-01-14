@@ -24,6 +24,5 @@ test('if 3 then scissors', (expect) => {
     
     const actual = getRandomThrow(3);
 
-    // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
