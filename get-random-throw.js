@@ -1,35 +1,23 @@
-export function getRandomThrow() {
+export function getRandomThrow(ranNum) {
 
-    const randomNumber = Math.round(Math.random() * 3);
-    
-    let computersThrow;
+    if (ranNum === 1) {
 
-    if (randomNumber === 1) {
+        return 'rock';
 
-        computersThrow = 'rock';
+    } else if (ranNum === 2) {
 
-    } else if (randomNumber === 2) {
+        return 'paper';
 
-        computersThrow = 'paper';
+    } else if (ranNum === 3) {
 
-    } else if (randomNumber === 3) {
-
-        computersThrow = 'scissors';
+        return 'scissors';
     }
-
-    return computersThrow;
 
 }
 
 export function didUserWin(userChoice, computerChoice) {
 
-    if (userChoice === 'rock' && computerChoice === 'rock') {
-        return 'draw';
-
-    } else if (userChoice === 'paper' && computerChoice === 'paper') {
-        return 'draw';
-
-    } else if (userChoice === 'scissors' && computerChoice === 'scissors') {
+    if (userChoice === computerChoice) {
         return 'draw';
 
     } else if (userChoice === 'rock' && computerChoice === 'scissors') {
@@ -41,13 +29,6 @@ export function didUserWin(userChoice, computerChoice) {
     } else if (userChoice === 'scissors' && computerChoice === 'paper') {
         return 'win';
 
-    } else if (userChoice === 'paper' && computerChoice === 'scissors') {
-        return 'lose';
-        
-    } else if (userChoice === 'scissors' && computerChoice === 'rock') {
-        return 'lose';
+    } else return 'lose';
 
-    } else if (userChoice === 'rock' && computerChoice === 'paper') {
-        return 'lose';
-    }
 }
